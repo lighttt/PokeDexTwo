@@ -24,6 +24,7 @@ class PokemonModel {
   List<String> types;
   List<String> abilities;
   String evolveLevel;
+  bool isFavourite;
 
   PokemonModel(
       {this.id,
@@ -50,7 +51,8 @@ class PokemonModel {
       this.evolutions,
       this.types,
       this.abilities,
-      this.evolveLevel});
+      this.evolveLevel,
+      this.isFavourite = false});
 
   factory PokemonModel.fromJson(Map<String, dynamic> json) {
     return PokemonModel(
